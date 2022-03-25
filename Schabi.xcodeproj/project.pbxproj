@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD2B057B27ECF5C500376E2A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD2B057A27ECF5C400376E2A /* Settings.bundle */; };
 		DDED8B4E27EC72920057D477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED8B4D27EC72920057D477 /* AppDelegate.swift */; };
 		DDED8B5027EC72920057D477 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED8B4F27EC72920057D477 /* SceneDelegate.swift */; };
 		DDED8B5227EC72920057D477 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED8B5127EC72920057D477 /* ViewController.swift */; };
@@ -36,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD2B057627ECD9DA00376E2A /* SchabiRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SchabiRelease.entitlements; sourceTree = "<group>"; };
+		DD2B057727ECD9F500376E2A /* SchabiDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SchabiDebug.entitlements; sourceTree = "<group>"; };
+		DD2B057827ECE08C00376E2A /* KeychainSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeychainSwift.xcframework; path = Carthage/Build/KeychainSwift.xcframework; sourceTree = "<group>"; };
+		DD2B057A27ECF5C400376E2A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		DDED8B4A27EC72920057D477 /* Schabi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schabi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDED8B4D27EC72920057D477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDED8B4F27EC72920057D477 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6116022B9DC6E8803BADE631 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD2B057827ECE08C00376E2A /* KeychainSwift.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DDED8B4127EC72920057D477 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,7 @@
 				DDED8B6327EC72930057D477 /* SchabiTests */,
 				DDED8B6D27EC72930057D477 /* SchabiUITests */,
 				DDED8B4B27EC72920057D477 /* Products */,
+				6116022B9DC6E8803BADE631 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +113,12 @@
 		DDED8B4C27EC72920057D477 /* Schabi */ = {
 			isa = PBXGroup;
 			children = (
+				DD2B057727ECD9F500376E2A /* SchabiDebug.entitlements */,
+				DD2B057627ECD9DA00376E2A /* SchabiRelease.entitlements */,
 				DDED8B4D27EC72920057D477 /* AppDelegate.swift */,
 				DDED8B4F27EC72920057D477 /* SceneDelegate.swift */,
 				DDED8B5127EC72920057D477 /* ViewController.swift */,
+				DD2B057A27ECF5C400376E2A /* Settings.bundle */,
 				DDED8B5327EC72920057D477 /* Main.storyboard */,
 				DDED8B5627EC72930057D477 /* Assets.xcassets */,
 				DDED8B5827EC72930057D477 /* LaunchScreen.storyboard */,
@@ -231,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD2B057B27ECF5C500376E2A /* Settings.bundle in Resources */,
 				DDED8B5A27EC72930057D477 /* LaunchScreen.storyboard in Resources */,
 				DDED8B5727EC72930057D477 /* Assets.xcassets in Resources */,
 				DDED8B5527EC72920057D477 /* Main.storyboard in Resources */,
@@ -437,8 +455,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Schabi/SchabiDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 595TEE9LSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Schabi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -446,6 +466,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,8 +485,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Schabi/SchabiRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 595TEE9LSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Schabi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -473,6 +496,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,6 +517,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 595TEE9LSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -512,6 +537,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 595TEE9LSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
@@ -528,8 +554,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 595TEE9LSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.sailer.ios.SchabiUITests;
@@ -545,8 +573,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 595TEE9LSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.sailer.ios.SchabiUITests;
